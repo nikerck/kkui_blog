@@ -5,7 +5,7 @@
         <common-header></common-header>
         <div class="body">
             <input placeholder="请输入标题 不要超过12个字" />
-            <div id="vditor"></div>
+            <div id="vditor" style="font-size: 16px;"></div>
         </div>
         <div class="bottom-git">
             <div class="fontAmount">共 {{fontAmount}} 字</div>
@@ -30,12 +30,22 @@ import commonHeader from "@/components/commonHeader.vue"
     export default{
         data(){
             return{
-                contentEditor:"",
+                contentEditor:{},
                 value:"",
                 userName:"Kkui",
-                fontAmount:0,
+                fontAmount:'',
             }
         },
+        watch:{
+            // fontAmount(next){
+            //     console.log(next);
+            //     // if(next.length!= this.$data.fontAmount){
+            //     //     this.$data.fontAmount = next.length
+            //     //     console.log(next);
+            //     // }
+            // }
+        },
+
         components:{
             commonHeader
         }, 
@@ -82,22 +92,15 @@ import commonHeader from "@/components/commonHeader.vue"
                     "preview",
                     "help",
                 ],
-            },
-        ],
-            toolbarConfig:{
-                pin:true
-            },
-            hint:{
+                },
+            ],
+            });
 
-            },
-            cache:{
-                enable:false
-            },
-            after:()=>{
-                this.contentEditor.setValue("hello,Welcome to share your thoughts")
-            }
-            })
+            console.log(this.contentEditor.getValue());
+            
         },
+        
+        
         methods:{
             
         }

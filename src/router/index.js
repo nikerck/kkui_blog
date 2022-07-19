@@ -4,6 +4,7 @@ import IndexView from '@/views/indexView'
 import LoginRegisterView from '@/views/loginRegisterView'
 import WirteView from '@/views/wirteView'
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -21,6 +22,11 @@ const routes = [
     path:'/wirte',
     name:'wirte',
     component:WirteView
+  },
+  {
+    path:'/content',
+    name:'content',
+    component:() => import('@/views/contentView')
   }
   
 ]
