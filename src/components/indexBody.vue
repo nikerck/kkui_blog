@@ -1,0 +1,65 @@
+<style lang="css" src="@/assets/css/indexBody.css" scoped></style>
+
+<template>
+    <div class="container">
+        <div class="box" v-for="(blogData,index) in blogDatas" :key="index" >
+            <div class="box-head" >
+                {{blogData.title}}
+            </div>
+            <div class="box-body" >
+                <div> <!-- 限制长度79个字符 多余用省略号代替 -->
+                    {{blogData.body}}
+                </div>
+                <div class="img" v-if="blogData.img != ''">
+                    <img :src="blogData.img" >
+                </div>
+            </div>
+            <div class="box-bottom" >
+                {{blogData.time}} {{blogData.auther}}
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<script>
+    export default{
+        data(){
+            return{
+                //实例数据
+                blogDatas:[
+                    {
+                        title:"第一篇blog记录",
+                        body:"我觉得这是一个好开始，至少不是坏的开始，我觉得这是一个好开始，至少不是坏的开始，我觉得这是一个好开始，至少不是坏的开始，我觉得这是一个好开始，至少不是坏的开始",
+                        img:"",//url链接 所有图片在后端以一个新的api访问
+                        time:"2022.7.2",
+                        auther:"不知名路人",
+                    },
+                    {
+                        title:"关于如何摆",
+                        body:"我觉得这是一个好开始，至少不是坏的开始，我觉得这是一个好开始，至少不是坏的开始，我觉得这是一个好开始，至少不是坏的开始，我觉得这是一个好开始，至少不是坏的开始",
+                        img:"https://ts1.cn.mm.bing.net/th/id/R-C.140982fb92ba73ec746b0fb24439c094?rik=NSgfupbFWd1HNw&riu=http%3a%2f%2fwww.51wendang.com%2fpic%2fad8d861180e68ca5d04e0d08%2f2-810-jpg_6-1080-0-0-1080.jpg&ehk=XNZ92zEPfW0l224Sf2FtnkFkINH5Ac5c0p44y3itrrg%3d&risl=&pid=ImgRaw&r=0",//url链接 所有图片在后端以一个新的api访问
+                        time:"2022.7.2",
+                        auther:"不知名路人",
+                    },
+                     {
+                        title:"第一篇blog记录",
+                        body:"我觉得这是一个好开始，至少不是坏的开始，我觉得这是一个好开始，至少不是坏的开始，我觉得这是一个好开始，至少不是坏的开始，我觉得这是一个好开始，至少不是坏的开始",
+                        img:"",//url链接 所有图片在后端以一个新的api访问
+                        time:"2022.7.2",
+                        auther:"不知名路人",
+                    }
+                
+                ]
+            }
+        },
+        metheds:{
+
+        }
+
+    }
+
+</script>
+
+
+
