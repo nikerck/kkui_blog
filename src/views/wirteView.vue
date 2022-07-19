@@ -11,7 +11,7 @@
             <div class="fontAmount">共 {{fontAmount}} 字</div>
             <div class="button">
                 <el-button round disabled>定时发布</el-button>
-                <el-button type="primary" round>发布</el-button>
+                <el-button type="primary" round @click="test">发布</el-button>
             </div>
             
         </div>
@@ -33,24 +33,26 @@ import commonHeader from "@/components/commonHeader.vue"
                 contentEditor:{},
                 value:"",
                 userName:"Kkui",
-                fontAmount:'',
+                fontAmount:0,
             }
         },
         watch:{
-            // fontAmount(next){
-            //     console.log(next);
-            //     // if(next.length!= this.$data.fontAmount){
-            //     //     this.$data.fontAmount = next.length
-            //     //     console.log(next);
-            //     // }
-            // }
+            
         },
 
         components:{
             commonHeader
         }, 
         mounted(){
+            const that = this 
+
             this.contentEditor = new Vditor("vditor",{
+            counter:{
+                "enable": true,
+                after(count){
+                    that.fontAmount = count
+                }
+                },
             height:360,
             toolbar: [
                 "emoji",
@@ -95,14 +97,13 @@ import commonHeader from "@/components/commonHeader.vue"
                 },
             ],
             });
-
-            console.log(this.contentEditor.getValue());
-            
         },
         
         
         methods:{
-            
+            test(){
+               console.log(this.contentEditor.getValue()); 
+            }
         }
     }
 </script>

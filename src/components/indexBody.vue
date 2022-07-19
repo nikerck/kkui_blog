@@ -10,7 +10,7 @@
                 <div> <!-- 限制长度79个字符 多余用省略号代替 -->
                     {{blogData.body}}
                 </div>
-                <div class="img" v-if="blogData.img != ''">
+                <div class="img" v-if="blogData.img != ''" style="cursor: pointer;">
                     <img :src="blogData.img" >
                 </div>
             </div>
@@ -54,7 +54,7 @@
             }
         },
         metheds:{
-
+            
         }
 
     }

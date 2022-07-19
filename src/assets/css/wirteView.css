@@ -5,7 +5,7 @@
     
     overflow: hidden;
 
-    background-color: #f5f6f7;
+    background-color: white;
 }
 .body{
     width: 100%;
@@ -18,7 +18,9 @@
     height: 40px;
     border: none;
     border-radius: 15px;
-    border-bottom: 2px solid #d1d2d4;
+    
+    border: 2px solid #d1d2d4;
+    box-shadow:0 0 5px 0 #d1d2d4;
     outline: none;
     
     
@@ -60,3 +62,4 @@
     justify-content: space-around;
     
 }
+
