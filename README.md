@@ -30,6 +30,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### 字体颜色
 #50505c
 
-<!-- 开源markdown编辑器
-$ npm install mavon-editor --save
-https://github.com/hinesboy/mavonEditor -->
+<!-- 
+编辑器地址
+https://github.com/Vanessa219/vditor?mode=dark -->

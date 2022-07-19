@@ -5,7 +5,7 @@
         <common-header></common-header>
         <div class="body">
             <input placeholder="请输入标题 不要超过12个字" />
-            <v-md-editor v-model="text" height="60vh" left-toolbar="undo redo clear | h bold italic strikethrough quote | ul ol table hr | emoji link image code | tip | save" ></v-md-editor>
+            <div id="vditor"></div>
         </div>
         <div class="bottom-git">
             <div class="fontAmount">共 {{fontAmount}} 字</div>
@@ -21,30 +21,83 @@
 </template>
 
 <script>
-import commonHeader from "@/components/commonHeader.vue"
+import Vditor from "vditor"
+import "vditor/dist/index.css"
 
- 
+
+import commonHeader from "@/components/commonHeader.vue"
 
     export default{
         data(){
             return{
-                text:'',
+                contentEditor:"",
                 value:"",
                 userName:"Kkui",
                 fontAmount:0,
             }
         },
-        watch:{
-            text(next){
-                if(next.length!= this.$data.fontAmount){
-                    this.$data.fontAmount = next.length
-                    
-                }
-            }
-        },
         components:{
             commonHeader
         }, 
+        mounted(){
+            this.contentEditor = new Vditor("vditor",{
+            height:360,
+            toolbar: [
+                "emoji",
+                "headings",
+                "bold",
+                "italic",
+                "strike",
+                "link",
+                "|",
+                "list",
+                "ordered-list",
+                "check",
+                "outdent",
+                "indent",
+                "|",
+                "quote",
+                "line",
+                "code",
+                "inline-code",
+                "insert-before",
+                "insert-after",
+                "|",
+                "upload",
+                "table",
+                "|",
+                "undo",
+                "redo",
+                "|",
+                "fullscreen",
+                "edit-mode",
+                "outline",
+                {
+                name: "more",
+                toolbar: [
+                    "both",
+                    "code-theme",
+                    "content-theme",
+                    "export",
+                    "preview",
+                    "help",
+                ],
+            },
+        ],
+            toolbarConfig:{
+                pin:true
+            },
+            hint:{
+
+            },
+            cache:{
+                enable:false
+            },
+            after:()=>{
+                this.contentEditor.setValue("hello,Welcome to share your thoughts")
+            }
+            })
+        },
         methods:{
             
         }

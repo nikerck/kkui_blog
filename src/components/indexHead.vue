@@ -4,7 +4,7 @@
     <div class="container">
         <el-row type="flex" justify="center" align="middle" :gutter="20" :class="{slide_up:slide}">
             <el-col :span="4">
-                <img class="logo" src="@/assets/logo.png" >
+                <img class="logo" src="@/assets/logo.jpg" >
             </el-col>
             <el-col :span="4" class="name" style="cursor: default;">
                 <div >{{name}}</div>

@@ -9,7 +9,7 @@
         <el-col :span="10">
         </el-col>
         <el-col :span="3">
-            <img class="logo" src="@/assets/logo.png" alt="">
+            <img class="logo" src="@/assets/logo.jpg" alt="">
         </el-col>
         <el-col :span="3">
             <div>{{userName}}</div>
