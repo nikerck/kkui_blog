@@ -1,5 +1,3 @@
-<style lang="css" src="@/assets/css/wirteView.css" scoped></style>
-
 <template>
     <div class="container">
         <common-header></common-header>
@@ -108,3 +106,73 @@ import commonHeader from "@/components/commonHeader.vue"
     }
 </script>
 
+<style scoped>
+.container{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    
+    overflow: hidden;
+
+    background-color: white;
+}
+.body{
+    width: 100%;
+    height: 100%;
+}
+
+.body input{
+    width: 600px;
+    min-width: 400px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    
+    border: 2px solid #d1d2d4;
+    box-shadow:0 0 5px 0 #d1d2d4;
+    outline: none;
+    
+    
+
+    color: #606266;
+    font-size: 23px;
+    display: block;
+
+    padding:15px;
+    margin-top: 30px;
+    margin-left: 50%;
+    margin-bottom: 30px;
+    transform: translate(-50%);
+    
+}
+.body input:-ms-input-placeholder{
+    text-align: center;
+}
+.body input::-webkit-input-placeholder{
+    text-align: center;
+}
+
+
+
+
+.bottom-git{
+    background-color: white;
+    border-top: 1px solid #f5f6f7;
+    box-shadow: 3px 3px 8px #d1d2d4;
+    /* 编辑器全屏为90 */
+    z-index: 89;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+::v-deep .vditor-counter{
+    display: none;
+}
+</style>

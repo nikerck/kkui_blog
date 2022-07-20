@@ -63,3 +63,73 @@
 
 
 
+<style scoped>
+.container{
+    padding-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: hsla(0,0%,98%,.8); */
+    background-image: url("@/assets/bg.svg");
+    background-size: cover;
+}
+.box{
+    max-width: 600px;
+    min-width: 500px;
+    width: 60%;
+    box-shadow:3px 3px 5px 3px #d1d2d4;
+    border-radius: 5px;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+
+    background-color: white;
+    overflow: hidden;
+    
+    transition: 0.2s ease;
+    animation-name: drop;
+    animation-duration: 1s;
+}
+.box:hover{
+    overflow: hidden;
+    transform: scaleX(1.015) scaleY(1.015);
+    box-shadow:3px 3px 10px 3px #d1d2d4
+}
+.box-head{
+    font-size: 22px;
+    cursor: pointer;
+}
+.box-head:hover{
+    color: #7badfe;
+}
+
+.box-body{
+    color: #50505c;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    
+    justify-content: center;
+    
+}
+.box-body,.box-bottom{
+    cursor: default;
+}
+.box-body img, .box-body .img{
+    padding: 0px 8px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@keyframes drop{
+    0%{
+        margin-top: 0px;
+    }
+    100%{
+        margin-top: 20px;
+    }
+}
+</style>
