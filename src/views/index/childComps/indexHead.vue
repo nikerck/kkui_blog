@@ -22,7 +22,7 @@
                 <img src="@/assets/search.png" style="height: 30px;cursor: pointer;">
             </el-col>
             <el-col :span="4">
-                <div class="home" @click="inHome">liuxin网盘</div>
+                <div class="home" @click="inHome">网盘</div>
             </el-col>
         </el-row>
     </div>
@@ -102,7 +102,9 @@
     justify-content: center;
     background-color: #fff;
     border: none;
-    box-shadow: 2px 2px 5px 0 #d1d2d4;        
+    box-shadow: 2px 2px 5px 0 #d1d2d4;
+    overflow: hidden;  
+    
 }
 .container:hover{
    

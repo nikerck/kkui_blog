@@ -23,7 +23,7 @@ import Vditor from "vditor"
 import "vditor/dist/index.css"
 
 
-import commonHeader from "@/components/commonHeader.vue"
+import commonHeader from "@/components/common/commonHeader.vue"
 
     export default{
         data(){

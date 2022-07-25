@@ -11,16 +11,18 @@
                 <IndexBody></IndexBody>
             </el-main>
             <!-- 底部 -->
-            <!-- <el-footer>
-               
-            </el-footer> -->
+            <el-footer>
+                <commonFooter></commonFooter>
+            </el-footer>
         </el-container>
     </div>   
 </template>
 
 <script>
-import IndexHead from '@/components/indexHead.vue'
-import IndexBody from '@/components/indexBody.vue'
+import IndexHead from '@/views/index/childComps/indexHead.vue'
+import IndexBody from '@/views/index/childComps/indexBody.vue'
+import commonFooter from '@/components/common/commonFooter.vue'
+
 
 
     export default{
@@ -29,7 +31,7 @@ import IndexBody from '@/components/indexBody.vue'
             test: "hello"
         };
     },
-    components: { IndexHead ,IndexBody}
+    components: { IndexHead, IndexBody, commonFooter }
 }
 </script>
 
@@ -41,12 +43,15 @@ import IndexBody from '@/components/indexBody.vue'
     position: fixed;
     inset: 0;
     bottom: 40px;
-    z-index: 999;  
+    z-index: 999;
 }
 .el-main{
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
+}
+.el-footer{
+    padding: 0;
 }
 
 </style>

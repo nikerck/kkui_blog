@@ -1,9 +1,7 @@
-
-
 <template>
     <div class="container">
         <div class="box" v-for="(blogData,index) in blogDatas" :key="index" >
-            <div class="box-head" >
+            <div class="box-head" @click="inContent">
                 {{blogData.title}}
             </div>
             <div class="box-body" >
@@ -53,8 +51,10 @@
                 ]
             }
         },
-        metheds:{
-            
+        methods:{
+            inContent:function(){
+                this.$router.push("/content")
+            }
         }
 
     }
@@ -66,6 +66,7 @@
 <style scoped>
 .container{
     padding-top: 80px;
+    padding-bottom: 40px;
 
     display: flex;
     flex-direction: column;

@@ -5,6 +5,7 @@ import LoginRegisterView from '@/views/login/loginRegisterView'
 import WirteView from '@/views/wirte/wirteView'
 
 
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -28,7 +29,7 @@ const routes = [
     name:'content',
     component:() => import('@/views/content/contentView')
   }
-  
+
 ]
 
 const router = new VueRouter({

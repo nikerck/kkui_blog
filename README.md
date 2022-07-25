@@ -26,6 +26,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### 颜色 
 灰色 #d1d2d4
+蓝色 #7badfe
+链接的灰色 #99a9bf
 
 ### 字体颜色
 #50505c
