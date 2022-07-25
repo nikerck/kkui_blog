@@ -1,4 +1,4 @@
-<style lang="css" src="@/assets/css/indexHead.css" scoped></style>
+
 
 <template>
     <div class="container">
@@ -22,7 +22,7 @@
                 <img src="@/assets/search.png" style="height: 30px;cursor: pointer;">
             </el-col>
             <el-col :span="4">
-                <div class="home" @click="inHome">首页</div>
+                <div class="home" @click="inHome">liuxin网盘</div>
             </el-col>
         </el-row>
     </div>
