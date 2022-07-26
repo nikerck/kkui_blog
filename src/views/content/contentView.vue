@@ -25,37 +25,40 @@
             <div class="preview">
                 <v-md-preview :text="idea_text"></v-md-preview>
                 <Idea_description class="description"></Idea_description>
+                <Comment_edit class="Comment_edit"></Comment_edit>
             </div>
-            
-            
         </div>
         <CommonFooter></CommonFooter>
     </div>
 </template>
 
 <script>
-import commonHeader from "@/components/common/commonHeader.vue"
+import commonHeader from "@/components/common/commonHeader.vue";
 import CommonFooter from "@/components/common/commonFooter.vue";
 import Idea_description from "@/components/common/idea_description.vue";
+import Comment_edit from "../../components/common/comment_edit.vue";
+
+
 
 export default{
     
 
     data() {
         return {
-            idea_title:'三分钟教你如何上班摸鱼',
-            idea_date:"2022-7-25",
-            idea_upDate:"2022-7-25",
-            idea_fontMount:96,
-            idea_readMout:0,
-            idea_commentMount:0,
+            idea_title:'三分钟教你如何上班摸鱼', //标题
+            idea_date:"2022-7-25",  //创作时间
+            idea_upDate:"2022-7-25", //更新时间
+            idea_fontMount:96, //字数
+            idea_readMout:0,   //阅读量
+            idea_commentMount:0, //评论数
             idea_text: "这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码这是一段简单代码",
         };
     },
     components:{
     commonHeader,
     CommonFooter,
-    Idea_description
+    Idea_description,
+    Comment_edit
 }
 
 
@@ -129,9 +132,8 @@ export default{
     width: 80%;
 }
 
-.description{
-    
+.description,.Comment_edit{
     margin:16px 32px 32px;
-    
 }
+
 </style>
