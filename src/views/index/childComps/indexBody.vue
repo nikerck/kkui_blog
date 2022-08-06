@@ -71,7 +71,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: hsla(0,0%,98%,.8); */
+    background-color: hsla(0,0%,98%,.8);
     background-image: url("@/assets/bg.svg");
     background-size: cover;
 }

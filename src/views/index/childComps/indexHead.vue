@@ -9,21 +9,22 @@
             <el-col :span="4" class="name" style="cursor: default;">
                 <div >{{name}}</div>
             </el-col>
+            <el-col :span="4">
+                <div class="home" @click="inHome">首页</div>
+            </el-col>
             <el-col  :span="4">
                 <div @click = "inWirte">写作</div>
             </el-col>
             <el-col :span="5">
-                <div class="login" @click="inLogin">登录/注册</div>
-            </el-col>
-            <el-col :span="5">
-                <div>关于本站</div>
+                <div class="about" @click="inAbout">关于本站</div>
             </el-col>
             <el-col :span="2">
                 <img src="@/assets/search.png" style="height: 30px;cursor: pointer;">
             </el-col>
-            <el-col :span="4">
-                <div class="home" @click="inHome">网盘</div>
+             <el-col :span="5">
+                <div class="login" @click="inLogin">登录/注册</div>
             </el-col>
+            
         </el-row>
     </div>
 </template>
@@ -66,12 +67,15 @@
                 this.$router.push("/login")
                 
             },
+            inAbout:function(){
+                //关于本站页面
+                this.$router.push("/about")
+            },
             handleScroll(){
                 const that = this
                 //或者使用document.querySelector('.class或者#id').scrollTop
                 that.scroll = document.documentElement.scrollTop||document.body.scrollTop
-                that.$data.scroll = that.scroll
-                
+                that.$data.scroll = that.scroll 
             }
 
             

@@ -39,3 +39,6 @@ https://github.com/Vanessa219/vditor?mode=dark -->
 
 评论区组件
 https://gitee.com/bright-boy/bright-comment
+
+emoji表情快速复制粘贴
+https://emoji6.com/emojiall/#smileys

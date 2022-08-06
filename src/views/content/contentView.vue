@@ -25,7 +25,9 @@
             <div class="preview">
                 <v-md-preview :text="idea_text"></v-md-preview>
                 <Idea_description class="description"></Idea_description>
+                <div style="height: 0p; border-bottom:#7badfe 3px dashed;margin:40px 32px 0;"></div>
                 <Comment_edit class="Comment_edit"></Comment_edit>
+                <Comment_area class="Comment_area"></Comment_area>
             </div>
         </div>
         <CommonFooter></CommonFooter>
@@ -37,6 +39,7 @@ import commonHeader from "@/components/common/commonHeader.vue";
 import CommonFooter from "@/components/common/commonFooter.vue";
 import Idea_description from "@/components/common/idea_description.vue";
 import Comment_edit from "../../components/common/comment_edit.vue";
+import Comment_area from "@/components/common/comment_area.vue";
 
 
 
@@ -58,7 +61,8 @@ export default{
     commonHeader,
     CommonFooter,
     Idea_description,
-    Comment_edit
+    Comment_edit,
+    Comment_area
 }
 
 
@@ -72,8 +76,9 @@ export default{
 
 
 .body{
-    background-image: url('@/assets/bg.svg');
-    background-size: cover;
+    background-color: hsla(0,0%,98%,.8);
+    /* background-image: url('@/assets/bg.svg');
+    background-size: cover; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,8 +133,11 @@ export default{
     margin-bottom: 40px;
     background-color: white;
     box-shadow:3px 3px 5px 3px #d1d2d4;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 80%;
+}
+.preview:hover{
+    box-shadow:3px 3px 8px 3px #d1d2d4;
 }
 
 .description,.Comment_edit{

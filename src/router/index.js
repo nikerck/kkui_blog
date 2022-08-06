@@ -3,12 +3,19 @@ import VueRouter from 'vue-router'
 import IndexView from '@/views/index/indexView'
 import LoginRegisterView from '@/views/login/loginRegisterView'
 import WirteView from '@/views/wirte/wirteView'
+import Content from '@/views/content/contentView'
+import Test from '@/views/testVue'
 
 
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path:'/test',
+    name:'test',
+    component: Test
+  },
   {
     path: '/',
     name: 'index',
@@ -27,7 +34,12 @@ const routes = [
   {
     path:'/content',
     name:'content',
-    component:() => import('@/views/content/contentView')
+    component:Content
+  },
+  {
+    path:'/about',
+    name:'about',
+    component:() => import("@/views/about/aboutMe")
   }
 
 ]
